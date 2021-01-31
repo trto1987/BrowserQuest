@@ -27,11 +27,11 @@ function main(config) {
     
     switch(config.debug_level) {
         case "error":
-            log = new Log(Log.ERROR); break;
+            log = Log.get("error"); break;
         case "debug":
-            log = new Log(Log.DEBUG); break;
+            log = Log.get("debug"); break;
         case "info":
-            log = new Log(Log.INFO); break;
+            log = Log.get("info"); break;
     };
     
     log.info("Starting BrowserQuest game server...");
